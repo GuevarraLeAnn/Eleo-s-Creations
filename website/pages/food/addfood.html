@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Add Food</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+    <main class = "edit">
+      <h2>Add New Menu Item</h2>
+
+      <form class = "FoodForm">
+
+        <section class = "menu_specific">
+          <h3 class = "hidden">Specifications</h3>
+          <p>
+            <label for = "newfood_name"><span class = "form_q">Item Name</span></label>
+            <input type = "text" id = "newfood_name" name = "newfood_name" required>
+          </p>
+
+          <p>
+            <label for = "newfood_price"><span class = "form_q">Price</span></label>
+            <input type = "text" id = "newfood_price" name = "newfood_price" placeholder = "PHP 0.00" required>
+          </p>
+        </section>
+
+        <section class = "menu_desc">
+          <h3 class = "hidden">Description</h3>
+          <p>
+            <label for = "newfood_ing"><span class = "form_q">Ingredients</span></label>
+            <input type = "text" name = "newfood_desc" id = "newfood_ing">
+          </p>
+
+          <p>
+            <label for = "newfood_desc"><span class = "form_q">Description</span></label>
+            <textarea id = "newfood_desc" name = "newfood_desc" rows="6" cols="50" placeholder= "Describe menu item"></textarea>
+          </p>
+          <p>
+            <label for = "add2promo"><span class = "form_q">Add menu item to Couch Potato's Corner's <a href = "promos.html">weekly discount promos</a>?</span></label>
+            <input type = "checkbox" id = "add2promo" name = "add2promo">
+          </p>
+        </section>
+
+        <section class = "menu_others">
+          <h3 class = "hidden">Others</h3>
+          <div>
+            <img src = "../../images/order_menu/meal_default.png" alt = "gyudon">
+          </div>
+          <p>
+            <label for = "newfood_img"><span class = "form_q">Upload image</span></label>
+            <input type="file" id = "newfood_image" name="newfood_img" accept="image/*"> <!-- https://stackoverflow.com/questions/3828554/how-to-allow-input-type-file-to-accept-only-image-files -->
+          </p>
+
+        </section>
+
+        <!-- form actions -->
+        <section class = "form_actions">
+          <h3 class = "hidden">Actions</h3>
+
+          <button type= "reset" name="reset" value="Reset">Reset</button>
+
+          <a href = "foods.html" class = "back">Cancel</a> <!-- Cancel shouldn't be a button https://uxdesign.cc/cancel-as-a-button-or-a-link-67ccbf9df81e-->
+          <button type = "submit" value = "Save & Add">Save & Add</button>
+        </section>
+
+      </form>
+    </main>
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+
+  </body>
+</html>

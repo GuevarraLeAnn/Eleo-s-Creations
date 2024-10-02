@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <link href = "../styles/styles.css" rel = "stylesheet"> <!-- explain why .. works (i think it's goes back to one folder up) -->
+  </head>
+
+  <!-- navbar -->
+  <body> <!-- updated -->
+    <header class = "app">
+      <nav class = "home_nav">
+        <a href = "../index.html"><img src = "../images/cpc_logo_app.png" alt = "fds_logo" class = "logo"></a> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "../index.html">couch potato's corner</a></h1>
+      </nav>
+    </header>
+
+
+
+
+    <!-- Sign in Message -->
+    <main id = "signin">
+
+      <img src = "../images/signin/signin.png" alt = "illustration" class = "illustration">
+
+      <section id = "signinMessage">
+        <h2>Welcome back, Proud Potato! &#129364;</h2>
+        <p>Looks like it's time to get to work. Let's not keep those Couch Potatoes waiting!</p>
+      </section>
+
+    <!-- Sign in -->
+      <form id = "signinForm" action = "customers/customers.html"> <!-- might make a dashboard -->
+        <p>
+          <label for = "username">Username</label>
+          <input type = "text" id = "username" name = "username" required> <!-- explain required attribute -->
+        </p>
+
+        <p>
+          <label for = "password">Password</label>
+          <input type = "password" id = "password" name = "email" required>
+        </p>
+
+        <p>
+          <input type = "submit" value = "Sign in">
+        </p>
+      </form>
+
+
+    <!-- forgot -->
+      <section id = "forgot">
+        <h4 class = "hidden">Forgot Information</h4>
+        <ul>
+          <li><a href = "forgotusername.html">Forgot username?</a></li>
+          <li><a href = "forgotpassword.html">Forgot password?</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <img src = "../images/cpc_logo_footer.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>

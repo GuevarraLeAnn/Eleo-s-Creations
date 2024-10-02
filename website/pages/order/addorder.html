@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class = "edit">
+      <h2>Add New Order</h2>
+
+      <form class = "OrderForm"> <!-- form class https://www.w3schools.com/tags/att_input_form.asp-->
+
+      <!-- Select customers -->
+        <section class = "select_cust">
+          <h3>Order Information</h3>
+
+          <label for = "order_customers">
+            <span class = "form_q">Customer Name</span>
+          </label>
+
+          <!-- EDIT -->
+          <select class = "order_customers">
+            <option value ="0">Select a customer</option>
+            <option value ="1">Chrissy Cunningham</option>
+            <option value ="2">Eddie Munson</option>
+            <option value ="3">Steve Harrington</option>
+            <option value ="4">Max Mayfield</option>
+          </select>
+
+        </section>
+
+        <!-- Special instructions -->
+        <section class = "special_instructions">
+          <label for = "special_instructions">
+            <span class = "form_q">Special Instructions</span>
+          </label>
+          <textarea id = "special_instructions" name="special_instructions" rows="6" cols="50" placeholder="Type instructions to restaurant"></textarea>
+        </section>
+
+
+        <!-- Menu choices -->
+        <section class = "menu_choices">
+          <h3>Cart</h3> <!-- assistive technology and screenreader-friendly CSS to hide it https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section-->
+
+
+          <ul class = "menu_item"> <!--Lists are recommended for structuring multiple checkboxes or radio buttons. https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form-->
+            <!-- Gyudon -->
+            <li class = "meal1">
+              <div class = "menu_checkbox">
+                <input type = "checkbox" id = "option_gyudon" name = "option_gyudon">
+                <label for = "option_gyudon">Gyudon</label>
+              </div>
+
+              <div class = "menu_qty">
+                <label for = "gyudon_qty">Qty</label>
+                <input type = "number" id = "gyudon_qty" name = "gyudon_qty" value = "0" min="0">
+              </div>
+
+              <div class = "menu_img">
+                <img src = "../../images/order_menu/gyudon.png" alt = "gyudon">
+              </div>
+            </li>
+
+          <!-- Tori Katsu -->
+            <li class = "meal2">
+              <div class = "menu_checkbox">
+                <input type = "checkbox" id = "option_tori" name = "option_tori">
+                <label for = "option_tori">Tori Katsu</label>
+              </div>
+
+              <div class = "menu_qty">
+                <label for = "tori_katsu_qty">Qty</label>
+                <input type = "number" id = "tori_katsu_qty" name = "tori_katsu_qty" value = "0" min="0">
+              </div>
+
+              <div class = "menu_img">
+                <img src = "../../images/order_menu/tori_katsu.png" alt = "tori katsu">
+              </div>
+            </li>
+
+          <!-- Beef Yakiniku -->
+            <li class = "meal3">
+              <div class = "menu_checkbox">
+                <input type = "checkbox" id = "option_yaki_b" name = "option_yaki_b">
+                <label for = "option_yaki_b">Beef Yakiniku</label>
+              </div>
+
+              <div class = "menu_qty">
+                <label for = "yaki_b_qty">Qty</label>
+                <input type = "number" id = "yaki_b_qty" name = "yaki_b_qty" value = "0" min="0">
+              </div>
+
+              <div class = "menu_img">
+                <img src = "../../images/order_menu/beef_yakiniku.png" alt = "beef yakiniku">
+              </div>
+            </li>
+
+          <!-- Teryaki Chicken -->
+            <li class = "meal4">
+              <div class = "menu_checkbox">
+                <input type = "checkbox" id = "option_teryaki_c" name = "option_teryaki_c"">
+                <label for = "option_teryaki_c">Chicken Teryaki</label>
+              </div>
+
+              <div class = "menu_qty">
+                <label for = "teryaki_c_qty">Qty</label>
+                <input type = "number" id = "teryaki_c_qty" name = "teryaki_c_qty" value = "0">
+              </div>
+
+              <div class = "menu_img">
+                <img src = "../../images/order_menu/chicken_teryaki.png" alt = "chicken teryaki">
+              </div>
+            </li>
+          </ul>
+
+        </section> <!--ends menu choices -->
+
+
+        <!-- form actions -->
+        <section class = "form_actions">
+          <h3 class = "hidden">Actions</h3>
+
+          <a href = "orders.html" class = "back">Cancel</a> <!-- Cancel shouldn't be a button https://uxdesign.cc/cancel-as-a-button-or-a-link-67ccbf9df81e-->
+          <button type = "submit" value = "Save & Add">Save & Add</button> <!--Clicking on the Add Order button does not need to result in any action being performed.-->
+
+        </section>
+
+      </form>
+
+    </main>
+
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+
+  </body>
+</html>

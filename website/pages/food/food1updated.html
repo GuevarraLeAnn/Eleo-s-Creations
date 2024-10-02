@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Food Details</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+    <main class = "edit">
+
+      <!-- TAKE NOTE OF DIFFERENCE FROM FOOD1.HTML -->
+
+      <dialog class="update_dialog" open> <!-- https://css-tricks.com/some-hands-on-with-the-html-dialog-element/  or https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog-->
+        <div class = "d_content">
+          <img src = "../../images/icons/update_success.png" alt = "update success" class ="updated">
+          <h3>Update Success</h3>
+          <p>Your menu item <strong class = "info">Gyudon</strong> has successfully been updated.</p>
+          <form method="dialog">
+            <button class = "close-modal" value = "Ok">Ok</button>
+          </form>
+        </div>
+      </dialog>
+
+
+
+      <div class = "container2">
+        <img src = "../../images/order_menu/gyudon.png" alt = "gyudon" class = "usr" id = "gyudon_meal">
+        <!-- Item Info -->
+        <section class = "menuitem_info">
+          <h2>Gyudon (牛丼)</h2>
+          <h3>PHP 200.00</h3>
+
+
+        <!-- Item Ingredients -->
+        <section class = "menuitem_ing">
+          <h4>Ingredients</h4>
+          <p>thin sliced beef, egg, green onions, plain rice</p>
+        </section>
+
+        <!-- Item Description -->
+        <section class = "menuitem_desc">
+          <h4>Description</h4>
+          <p>Gyudon is a best-seller among Nezuko's donburi dishes.
+            Topped with sweet, savory beef, egg, and the freshest ingredients,
+            along with our signature sauce. Get a taste of Japan's
+            classic comfort-food cravings!</p>
+        </section>
+
+        <!-- Info Actions -->
+        <section class = "info_actions">
+          <h3 class = "hidden">Actions</h3>
+          <ul>
+            <li><a href = "editfood1.html" class = "edit_bttn_info">Edit Details<a/></li>
+            <li><a href = "confirm_food1_deletion.html" class = "delete_bttn_info">Delete Item<a/></li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+</html>
+
+
+
+
+
+<!-- page instructions
+this page should also have a message that confirms that the update
+was a success. Name this page food1updated.html. You only need to
+make this for one customer.
+-->

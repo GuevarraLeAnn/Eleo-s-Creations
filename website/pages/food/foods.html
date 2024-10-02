@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class = "lists">
+
+      <section class = "header_main">
+        <h2>Menu</h2>
+        <a class = "add" href = "addfood.html">+ Add New Menu Item</a>
+      </section>
+
+      <section id = "food_list">
+
+        <table class="list_table">
+          <thead>
+            <tr>
+              <th colspan="2">Item</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!--Menu Item 1-->
+            <tr>
+              <td>
+                <img src = "../../images/order_menu/gyudon.png" alt = "gyudon" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_food"><a href = "food1.html">Gyudon</a></h5>
+              </td>
+
+              <td>PHP 200.00</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "food1.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editfood1.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_food1_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+
+            </tr>
+
+            <!--Menu Item 2-->
+            <tr>
+              <td>
+                <img src = "../../images/order_menu/tori_katsu.png" alt = "tori katsu" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_food"><a href = "food2.html">Tori Katsu</a></h5>
+              </td>
+
+              <td>PHP 180.00</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "food2.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editfood2.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_food2_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+            </tr>
+
+            <!--Menu Item 3-->
+            <tr>
+              <td>
+                <img src = "../../images/order_menu/beef_yakiniku.png" alt = "beef yakiniku" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_food"><a href = "food3.html">Beef Yakiniku</a></h5>
+              </td>
+
+              <td>PHP 198.00</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "food3.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editfood3.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_food3_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+            </tr>
+
+            <!--Menu Item 4-->
+            <tr>
+              <td>
+                <img src = "../../images/order_menu/chicken_teryaki.png" alt = "chicken teryaki" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_food"><a href = "food4.html">Chicken Teriyaki</a></h5>
+              </td>
+
+              <td>PHP 185.00</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "food4.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editfood4.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_food4_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+</html>
+
+
+<!--
+
+Edit   pencil icon
+
+View   click customer name or magnifying glass icon or just view in general
+
+Delete  delete icon
+
+
+
+Menu
+
+Item
+price
+
+
+
+
+-->
+
+<!-- page instructions
+    This page lists all the food items that the website offers. Each item shows the
+    name of the food item and its price. For each food item, there should be links
+    to the edit details and view details pages, and a delete food button as well.
+
+These pages will be described in the succeeding items. List at least 3 food
+items. Only the first food item needs to have clickable buttons. This page
+should also have a link that goes to the Add Food page.
+
+
+The buttons should work similarly to how the buttons in the customers list
+page work, except it should go to the relevant pages for the relevant food
+item. For the delete pages, name the files
+confirm_food1_deletion.html and food1deleted.html.
+
+-->

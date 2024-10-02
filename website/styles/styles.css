@@ -1,0 +1,1173 @@
+/*
+    LeAnn C. Guevarra, 195832
+    July 8, 2022
+
+    I/we certify that this submission complies with the DISCS Academic
+    Integrity Policy.
+
+    If I/we have discussed my/our CSS code with anyone other than
+    my/our instructor(s), my/our groupmate(s), the teaching assistant(s),
+    the extent of each discussion has been clearly noted along with a
+    proper citation in the comments of my/our program.
+
+    If any CSS code or documentation used in my/our program was obtained
+    from another source, either modified or unmodified, such as a textbook,
+    website, or another individual, the extent of its use has been clearly
+    noted along with a proper citation in the comments of my/our program.
+*/
+
+/*
+    cite your sources here
+    https://www.youtube.com/watch?v=G6SwH0lFxM8 (tutorial for nav bar w/logo)
+    https://www.w3schools.com/css/css_navbar_horizontal.asp (hover tutorial)
+
+    https://www.youtube.com/watch?v=8yrTnjo0TWw (to style a form)
+
+    https://www.w3schools.com/cssref/css_units.asp (guide to css units)
+
+    https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ (had trouble centering objects)
+
+    https://stackoverflow.com/questions/2306117/radio-buttons-and-label-to-display-in-same-line (to declutter checkboxes and radio buttons in forms)
+
+    https://css-tricks.com/snippets/css/complete-guide-grid/ (guide to css grid)
+    https://grid.layoutit.com/ (used for experimenting and understanding how grids work)
+
+    How to structure a form: https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form
+
+    Section: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+    table: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+    dialog open: https://nikitahl.com/html-dialog-element https://css-tricks.com/some-hands-on-with-the-html-dialog-element/
+    footer: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
+
+    linking button https://programminghead.com/how-to-link-submit-button-to-another-page-in-html.php#:~:text=how%20to%20make%20a%20button%20or%20a%20page%20link%20to,the%20Path%20to%20your%20Button.
+
+    https://stackoverflow.com/questions/3828554/how-to-allow-input-type-file-to-accept-only-image-files (to limit files accepted for the upload file)
+
+
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*
+
+#fae056 light yellow
+#faba0a bright yellow orange
+#f0af00 dark yellow
+*/
+
+/* ------------------ universal PURPOSE : selector ---------------------------*/
+
+* {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box; /* idk this */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* i have to remove colors */
+}
+
+
+button, a {
+  cursor: pointer;
+}
+
+
+h1, h2 {
+  color: brown;
+  font-size: 25pt;
+}
+
+ul {
+  list-style: none;
+
+}
+
+
+
+
+/* !! try to SHORTEN header later */
+/* ------------------------------ HEADER VERSION 1 ------------------------------*/
+
+.app {
+  height: 200px; /* how tall is ur header */
+  width: 100%; /* fill entire row of screen */
+  padding: 0 5%;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); /* HOW TO SHADOW https://stackoverflow.com/questions/60680652/how-to-add-a-shadow-under-a-navbar-using-css */
+  position: fixed;  /*keeps navigation section frozen */
+}
+
+.home_nav {
+  display: grid;
+  grid-column-gap: 300px; /* to keep nav elements and logo apart */
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 40px; /* li elements get affected */
+  max-width: 300px;
+}
+
+
+.home_nav > ul > li {
+  display: inline-block;
+  margin: 80px 30px 0;    /* change margin top to lower nav items */
+}
+
+
+.home_nav > ul > li > a {
+  text-decoration: none;
+  padding: 5px 0;
+  cursor: pointer;
+
+}
+
+/* first 3 li */
+.home_nav > ul > li:nth-of-type(-n+3):hover { /* https://stackoverflow.com/questions/18672625/how-to-select-first-2-li-elements-using-css#:~:text=The%20syntax%20for%20selecting%20the,the%20first%202%20li%20elements. */
+  background-color: #F9DB68;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* sign in button */
+.home_nav > ul > li:last-of-type {
+  display: inline-block;
+  background-color: #faba0a;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px; /* make button round-ish */
+  font-weight: 600;
+  color: black;
+  margin: 0 20px; /*moving nav elements to the right */
+}
+
+
+/* FOR the restaurant users */
+
+/* ---------------------------------HEADER VERSION -------------------------------------2 */
+
+.resto_user {
+  height: 200px; /* how tall is ur header */
+  width: 100%; /* fill entire row of screen faba0a*/
+  padding: 0 5%;
+  background: #faba0a;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); /* HOW TO SHADOW https://stackoverflow.com/questions/60680652/how-to-add-a-shadow-under-a-navbar-using-css */
+  position: fixed;  /*keeps navigation section frozen */
+}
+
+.major {
+  display: grid;
+  grid-column-gap: 300px; /* to keep nav elements and logo apart */
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 40px; /* li elements get affected */
+  max-width: 300px;
+}
+
+
+.major > ul > li {
+  display: inline-block;
+  margin: 80px 30px 0;    /* change margin top to lower nav items */
+  color: black;
+}
+
+
+.major > ul > li > a {
+  text-decoration: none;
+  padding: 5px 0;
+  cursor: pointer;
+
+}
+
+/* first 3 li */
+.major > ul > li:nth-of-type(-n+3):hover { /* https://stackoverflow.com/questions/18672625/how-to-select-first-2-li-elements-using-css#:~:text=The%20syntax%20for%20selecting%20the,the%20first%202%20li%20elements. */
+  background-color: #F9DB68;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+
+}
+
+/* sign in */
+.major > ul > li:last-of-type {
+  display: inline-block;
+  background-color: black;
+  padding: 10px 20px 10px 20px;
+  border-radius: 4px; /* make button round-ish */
+  font-weight: 600;
+  color: white;
+  margin: 0 20px; /*moving nav elements to the right */
+}
+
+
+
+
+
+
+/* -----------INDEX.HTML --------------------------------------------------------*/
+
+/* grid main content */
+
+#home {
+  padding-top: 200px; /* height of nav is 200px, this is to distance the beginning of the grid and avoid clutter */
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr;
+  grid-template-rows: 1.3fr 0.09fr 1.2fr 0.1fr 0.3fr;
+  grid-auto-flow: row;
+  justify-content: end;
+}
+
+/* hero section */
+.hero_illustration {
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+#Hero {
+  grid-area: 1 / 3 / 2 / 4;
+  margin: 50px 130px 50px 10px;
+}
+
+#Hero > h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 30pt;
+}
+#Hero >  p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+
+
+/* Services */
+
+#Services {
+  grid-area: 2 / 1 / 3 / 4;
+  text-align: center;
+}
+
+#offer1 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+#offer2 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#offer3 {
+  grid-area: 3 / 3 / 4 / 4;
+
+}
+
+.offers {
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#Services h3 {
+  font-size: 25pt;
+}
+
+.offers h4 {
+  color: brown;
+}
+
+
+
+/* contact */
+#Contact {
+  grid-area: 4 / 1 / 5 / 4;
+  background-color: #ECECEC;
+  border-radius: 10px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+#Contact > h3 {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 25pt;
+}
+
+#contact_form {
+  box-sizing: border-box;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+#contact_form label {
+  display: block;
+  margin-top: 1em;
+}
+
+#contact_form input {
+  padding: 0.5em;
+  border: solid 1px #999;
+  border-radius: 4px;
+  width: 100%; /* affects even button below it */
+}
+
+#contact_form textarea {
+  border: solid 1px #999;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+#contact_form input[type = "submit"] { /*targets only the send button */
+  width: 30%; /* make send button short */
+  float: right;
+  margin-top: 1.1em;
+  margin-bottom: 2.8em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+
+
+/* ------------footer universal -------------------------------------------------*/
+
+footer {
+  display: grid;
+  height: 250px; /* how tall is ur header */
+  width: 100%; /* fill entire row of screen */
+  padding: 0 5%;
+  background: #faba0a;
+  box-shadow: 4px 2px 4px 2px rgba(0,0,0,.2); /* HOW TO SHADOW https://stackoverflow.com/questions/60680652/how-to-add-a-shadow-under-a-navbar-using-css */
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+}
+
+footer > .logo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 70%;
+
+}
+
+footer > p {
+  grid-column: 2 / -2;
+  grid-row: -2 / -1;
+  margin-top: 95px;
+  font-weight: 500;
+
+}
+
+/* different footer for RESTO USER */
+.resto_user_footer{
+  background: black;
+  color: white;
+}
+
+
+/* OTHERS */
+/* resizing illustrations for index.html */
+.illustration {
+  max-width: 100%;
+}
+
+.hero_illustration {   /* grid-area: img; /* placement of hero image */
+  max-width: 50%;
+  margin-left: 50px;
+
+}
+
+.company_terms, .offers b {
+  font-weight: 600;
+  font-style: normal;
+  color:  #E58300;
+}
+
+
+/* ---------SIGN IN PAGE -------------------------------------------------------*/
+
+
+#signin {
+  padding-top: 200px;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-rows: 0.2fr 0.8fr;
+  gap: 0px 0px;
+
+}
+
+#signin > .illustration {
+  grid-area: 1 / 1 / 3 / 2;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+#signinMessage {
+  grid-area: 1 / 2 / 3 / 3;
+  background-color: #ECECEC;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 50px 100px 0px 100px;
+}
+
+#signinMessage > h2 {
+  margin: 50px 200px 0px 90px;
+  color: black;
+  font-size: 20pt;
+}
+
+#signinMessage > p {
+  padding: 0;
+  margin: 10px 90px 10px 90px;
+
+}
+
+#signinForm {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 100px 100px 0px 100px;
+  padding: 80px 90px 50px 90px;
+}
+
+#signinForm input {
+  padding: 0.5em;
+  border: solid 1px #999;
+  border-radius: 4px;
+  width: 100%;
+}
+
+#signinForm > :first-child{
+  margin-top: 50px;
+}
+
+
+#signinForm label {
+  display: block;
+  margin-top: 1em;
+}
+
+#signinForm input[type = "submit"] {
+  margin-top: 20px;
+  padding: 0.8em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: 500; /* all buttons have font-weight of 500; */
+}
+
+#forgot {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 480px 30px 50px 385px;
+  float: right;
+
+}
+
+/* -------customers.html -----------------LISTS--------------------------------------*/
+
+
+main {
+  padding-top: 200px;
+
+}
+
+.list_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.add { /* add button */
+  grid-row: 2 / 3;
+  background-color: #faba0a;
+  border-radius: 4px;
+  margin-right: 120px;
+  padding: 15px;
+  float: right;
+  box-shadow: 2px 0px 2px 2px rgba(0,0,0,.2);
+  font-weight: 600;
+}
+
+
+/* ---table related----------------TABLE ----(part of LISTS)---------------------- */
+
+.header_main {
+  margin: 90px 90px 90px 150px;
+}
+
+
+.usr {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+table {
+  margin-bottom: 90px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0,0,0,.2);
+  border-collapse: collapse; /* to remove space in between */
+
+}
+
+thead {
+  color: black;
+  font-weight: lighter;
+
+}
+
+td > img {
+  width: 80px;
+  height: 80px;
+
+}
+
+
+td {
+  max-width: 50%;
+  padding: 10px;
+}
+
+
+th{
+  height: 50px;
+}
+
+td > h5 {
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody:not(thead) :hover {
+  background-color: #fae056;
+
+}
+
+/* ------ICONS FOR VIEW EDIT DELETE------- */
+/* view edit delete */ /* if i don't use width and height the table is column will be too long */
+
+.bin, .pen, .glass {
+  display: inline-table;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+/* --------------- EDIT CUSTOMER form ------------------- APPLICABLE TO ADD CUSTOMER FORM */
+
+.edit h2 {
+  margin-top: 90px;
+  text-align: center;
+}
+
+
+.CustomerForm {
+
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  /* background-color: #ECECEC; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.3fr 0.2fr 0fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "basic profile"
+    "basic profile"
+    "delivery delivery"
+    "contact contact"
+    "save save";
+}
+
+
+.CustomerForm h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+.cust_basic_info h3 {
+  text-align: left;
+}
+
+
+.CustomerForm input {
+  width: 100%;
+
+}
+
+.CustomerForm input:not(input[type="file"]){
+  padding: 0.5em;
+  border: solid 1px #999;
+  border-radius: 4px;
+}
+
+.CustomerForm label { /* so that radio won't separate from label  :not(input[type="radio"] [type="radio"]) */
+  display: block;
+  margin-top: 1em;
+}
+
+.gender p {
+  padding-top: 20px;
+}
+.gender input[type="radio"] {
+  width: 15px;
+}
+
+.gender label {
+  display: inline;
+  margin-left: 5px;
+}
+
+
+/* placements */
+.cust_name, .cust_bday, .gender {
+  grid-area: basic;
+}
+
+.c_img {
+  grid-area: profile;
+  margin-left: 50px;
+}
+
+.cust_address {
+  grid-area: delivery;
+
+}
+
+.cust_contact {
+  grid-area: contact;
+}
+
+.form_actions {
+  grid-area: save;
+}
+
+/* -------resize picture ---------*/
+.cust_current_img img, .menu_others img, .menu_img img {
+  max-width: 90%;
+  border-radius: 20px;
+}
+
+#default_profile {
+  max-width: 90%;
+  border-radius: 0;
+
+}
+
+/* ------ form actions ------------*/
+.form_actions {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.form_actions > a {
+  padding: 0.8em;
+  width: 20%;
+  background-color: white;
+  border: solid 2px #999;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+.form_actions > button {
+  padding: 1em;
+  width: 25%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border: solid 2px black;
+  border-radius: 10px;
+
+}
+
+.form_actions > button[type = "reset"] {
+  width: 20%;
+  background-color: #E73927;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border: solid 2px #E73927;
+  border-radius: 10px;
+  margin-right: 5px;
+
+}
+
+/* ------------ EDIT MENU ---------------------------------------------*/
+
+.FoodForm {
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr 1.0fr 0.9fr 1.3fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Item food"
+    "Item food"
+    "Description Description"
+    "Description Description"
+    "save save";
+}
+
+.menu_others {
+  grid-area: food;
+  margin-left: 50px;
+}
+
+.form_actions { grid-area: save; }
+
+.menu_specific { grid-area: Item; }
+
+.menu_desc { grid-area: Description; }
+
+
+.FoodForm input:not(input[type="file"]){
+  padding: 0.5em;
+  border: solid 1px #999;
+  border-radius: 4px;
+}
+
+.FoodForm label {
+  display: block;
+  margin-top: 1em;
+}
+
+.FoodForm input {
+  width: 100%;
+}
+
+.menu_desc textarea {
+  border: solid 1px #999;
+  border-radius: 4px;
+  width: 100%;
+
+}
+
+
+.menu_desc input[type="checkbox"] {
+  width: 15px;
+}
+
+.menu_desc :last-child label {
+  display: inline;
+  margin-left: 5px;
+}
+
+
+
+/* ----------------EDIT ORDERS-----------------------------------------*/
+
+.OrderForm {
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "info"
+    "ins"
+    "cart"
+}
+
+.select_cust {
+  grid-area: info;
+  grid-column: 1 / 5;
+}
+
+.special_instructions {
+  grid-column: 2 / -3;
+  grid-row: 2 / 3;
+  width: 100%;
+}
+
+.menu_choices {
+  grid-area: cart;
+  margin-top: 20px;
+}
+
+
+.menu_item {
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "meal1 meal-2"
+    "meal3 meal4";
+}
+
+.meal1 { grid-area: meal1; }
+
+.meal-2 { grid-area: meal-2; }
+
+.meal3 { grid-area: meal3; }
+
+.meal4 { grid-area: meal4; }
+
+
+.OrderForm label {
+  display: block;
+  margin-top: 1em;
+}
+
+
+.menu_qty > label {
+  margin-top: 0;
+}
+.menu_qty > input {
+  padding: 4px;
+  width: 25%;
+}
+
+.menu_img img {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.menu_item > li {
+  margin-right: 5px;
+}
+
+.order_customers, .special_instructions > textarea {
+  padding: 0.5em;
+  border: solid 1px #999;
+  border-radius: 4px;
+}
+
+
+.order_customers{
+  width: 100%;
+}
+.special_instructions > textarea {
+  width: 170%;
+}
+
+
+.menu_checkbox input[type="checkbox"] {
+  width: 15px;
+  margin-top: 35px;
+
+}
+
+.menu_checkbox label {
+  display: inline;
+  margin-left: 5px;
+}
+
+/* ISSUE ------ */
+/* adjustments to cancel and save changes button for order form */
+
+.OrderForm .form_actions > a {
+  margin-left: -20%;
+}
+.OrderForm .form_actions > button {
+  width: 60%;
+}
+
+
+
+/* --------------customer1.html-------------------------- */ /* applicable to UPDATED1.HTML ----- */
+
+.container1 {
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 0.9fr 0.9fr 0.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "info profile"
+    "orders orders"
+    "actions actions";
+}
+
+
+
+.customer_info { grid-area: info; }
+
+.edit > .usr { grid-area: profile; }
+
+.customer_transactions { grid-area: orders; }
+
+.info_actions { grid-area: actions}
+
+.info_actions li {
+  display: inline-block;
+  margin-right: -20px;
+  font-weight: 500;
+}
+
+.info_actions li a {
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.edit_bttn_info {
+  background-color: black;
+  width: 25%;
+}
+
+.delete_bttn_info {
+  width: 25%;
+  background-color: red;
+}
+
+.customer_transactions h4 {
+  margin-bottom: 30px;
+}
+
+/* ------------------ food1.html ---------------------------------------*/
+
+.container2 {
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 0.5fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "info food"
+    "ing ing"
+    "desc desc"
+    "actions actions";
+}
+
+.menuitem_info { grid-area: info; }
+
+#gyudon_meal { grid-area: food; }
+
+.menuitem_ing{ grid-area: ing; }
+
+.menuitem_desc { grid-area: desc;
+  margin-bottom: 50px;}
+
+.info_actions { grid-area: actions; }
+
+.menuitem_info, .menuitem_ing, .menuitem_desc {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.container2 h2, h3 {
+  margin-bottom: 10px;
+}
+
+
+/* -------------- order1.html------------------ */
+
+.container3 {
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 30px 350px 90px 350px;
+  padding: 90px 90px 30px 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1.2fr 0.1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "orderinfo orderinfo"
+    "ordercart ordercart"
+    "actions actions";
+}
+
+.order_info { grid-area: orderinfo; }
+
+.order_cart { grid-area: ordercart; }
+
+.info_actions { grid-area: actions; }
+
+
+.cart{
+  width: 100%;
+}
+
+/* ---------- dialog--------------pop up-----------UPDATED1.HTML------------------- */
+
+.update_dialog {
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  border-radius: 10px;
+  border: none;
+  width: 30%;
+  height: 50%;
+  margin: 0 auto;
+  z-index: 1;
+  position: fixed;
+  top: 15px;
+
+
+}
+
+.d_content {
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+
+}
+
+
+
+.close-modal {
+  width: 100%;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: #faba0a;
+  cursor: pointer;
+}
+
+.updated {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  object-position: center 100%;
+
+}
+
+
+/* ----------- CONFIRMATION confirming deletion -----applicable to DELETED.HTML----------------*/
+.bg { /* did this because the footer was color white */
+  background-color: #faba0a;
+}
+.box{
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  border-radius: 10px;
+  border: none;
+  width: 30%;
+  height: 50%;
+  z-index: 1;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.warning{
+  padding-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+
+}
+
+.confirm_container{
+  margin: 1% auto;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+.confirm_container h1{
+  margin-bottom: 10px;
+}
+
+.confirm_container p{
+  margin-bottom: 30px;
+}
+
+/* buttons */
+.cancel_bttn {
+  border: none;
+  width: 100%;
+  background-color: white;
+  color: grey;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px;
+  border: solid 0.5px grey;
+  margin-right: 15px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.delete_bttn {
+  border: none;
+  width: 100%;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+
+.done_bttn {
+  border: none;
+  width: 100%;
+  background-color: #faba0a;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* final (it was said that sectioning elements should always have a header and for it to be usr friendly i used this)*/
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* friendly to other devicees  STILL EDIT LOL------ UNABLE TO USE HAHAHAH */
+
+@media screen and (max-width: 300px) {
+  header{
+    height: 500px;
+    display: grid;
+    text-align: left;
+  }

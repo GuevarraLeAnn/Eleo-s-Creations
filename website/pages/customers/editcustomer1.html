@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Edit Customer</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <main class = "edit">
+      <h2>Edit Customer</h2>
+
+      <form class = "CustomerForm" action = "customer1updated.html"> <!-- go to updated page right after saving -->
+
+      <!-- CHANGES -->
+      <!-- Profile -->
+        <section class = "c_img">
+          <h3 class = "hidden">Profile</h3>
+          <div class = "cust_current_img">
+            <img src = "../../images/customer_list/user_chrissy_cunningham.jpeg" alt = "user image" >
+          </div>
+
+          <div class = "cust_img">
+            <label for = "profile"><span class = "form_q">Upload image</span></label>
+            <input type="file" id = "profile" name="profile" accept="image/*"> <!-- https://stackoverflow.com/questions/3828554/how-to-allow-input-type-file-to-accept-only-image-files -->
+          </div>
+        </section>
+      <!-- CHANGES -->
+
+        <!-- Basic Information -->
+        <section class = "cust_basic_info">
+          <h3>Basic Information</h3>
+
+          <!-- Name -->
+          <div class = "cust_name">
+            <p>
+              <label for = "fname"><span class = "form_q">First Name</span></label>
+              <input type = "text" id = "fname" name = "fname" value = "Chrissy" required> <!-- explain required attribute -->
+            </p>
+
+            <p>
+              <label for = "lname"><span class = "form_q">Last Name</span></label>
+              <input type = "text" id = "lname" name = "lname" value = "Cunnningham" required>
+            </p>
+          </div>
+
+          <!-- Birthday -->
+          <div class = "cust_bday">
+            <label for = "bday"><span class = "form_q">Birthday</span></label>
+            <input type = "date" id ="bday" name = "bday" value = "1969-06-13">
+          </div>
+
+          <!-- Gender -->
+          <div class = "gender">
+            <p><span class = "form_q">Gender</span></p>
+            <ul>
+              <li>
+                <input type = "radio" id ="male" name = "gender">
+                <label for = "male">Male</label>
+              </li>
+
+              <li>
+                <input type = "radio" id ="female" name = "gender" checked> <!-- https://bulma.io/documentation/form/radio/ You can check a radio button by default by adding the checked HTML attribute to the <input> element. -->
+                <label for = "female">Female</label>
+              </li>
+
+              <li>
+                <input type = "radio" id ="other" name = "gender">
+                <label for = "other">Other</label>
+              <li>
+          </div>
+        </section>
+
+        <!-- Delivery Address -->
+        <section class = "cust_address">
+          <h3>Delivery Address</h3>
+
+          <!-- Street Address -->
+          <div class = "street_address">
+            <label for = "street"><span class = "form_q">Address</span></label>
+            <input type = "text" id = "street" name = "street" placeholder = "Street & Brgy." value = "Townhouse St. Brgy. Putatan" required>
+
+            <label for = "building"></label>
+            <input type = "text" id = "building" name = "building" placeholder = "Floor/Unit# & Bldg." value = "Blk. 7 Lot 22 Country Homes" required>
+          </div>
+
+          <!-- City & Province -->
+          <div class = "city_province">
+            <p>
+              <label for = "city"><span class = "form_q">City</span></label>
+              <input type = "text" id = "city" name = "city" value = "Alabang" required>
+            </p>
+
+            <p>
+              <label for = "province"><span class = "form_q">Province</span></label>
+              <input type = "text" id = "province" name = "province" value = "Metro Manila" required>
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class = "cust_contact">
+          <h3>Contact</h3>
+          <p>
+            <label for = "cust_email"><span class = "form_q">Email</span></label>
+            <input type = "email" id = "cust_email" name = "cust_email" value = "vecnasfirst@gmail.com">
+          </p>
+
+          <p>
+            <label for = "mobile"><span class = "form_q">Mobile Number</span></label>
+            <input type = "text" id = "mobile" name = "mobile" placeholder = "(09XX) XXX XXXX" value = "0947 101 2141" required>
+          </p>
+
+        </section>
+
+        <!-- form actions -->
+        <section class = "form_actions">
+          <h3 class = "hidden">Actions</h3>
+
+          <a href = "customers.html" class = "back">Cancel</a> <!-- Cancel shouldn't be a button https://uxdesign.cc/cancel-as-a-button-or-a-link-67ccbf9df81e-->
+          <button type = "submit" value = "Save Changes">Save Changes</button> <!--Clicking on the Add Order button does not need to result in any action being performed.-->
+
+        </section>
+
+      </form>
+    </main>
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+
+
+
+
+  </body>
+
+</html>
+
+<!-- page instructions
+This page allows the user to edit a chosen customer's details. It will look
+similar to the add customer page, but it will have the customer details in the
+fields, and should have a Save and Cancel button for the changes. Clicking
+on the Cancel button should bring the user back to the relevant customer
+details page. Clicking on the Save button should bring the user back to the
+details page as well, but this page should also have a message that confirms
+that the update was a success. Name this page customer1updated.html.
+You only need to make this for one customer.
+-->

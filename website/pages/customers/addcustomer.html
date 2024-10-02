@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+
+
+    <main class = "edit">
+      <h2>Add New Customer</h2>
+      <form class = "CustomerForm">
+
+        <section class = "c_img">
+          <h3 class = "hidden">Profile</h3>
+          <div class = "cust_current_img">
+            <img id = "default_profile" src = "../../images/customer_list/user_square.png" alt = "user image"> <!-- URGENT: add image -->
+          </div>
+
+          <div class = "cust_img">
+            <label for = "profile"><span class = "form_q">Upload image</span></label>
+            <input type="file" id = "profile" name="profile" accept="image/*"> <!-- https://stackoverflow.com/questions/3828554/how-to-allow-input-type-file-to-accept-only-image-files -->
+          </div>
+        </section>
+
+        <!-- Basic Information -->
+        <section class = "cust_basic_info">
+          <h3>Basic Information</h3>
+
+          <!-- Name -->
+          <div class = "cust_name">
+            <p>
+              <label for = "fname"><span class = "form_q">First Name</span></label>
+              <input type = "text" id = "fname" name = "fname" required> <!-- explain required attribute -->
+            </p>
+
+            <p>
+              <label for = "lname"><span class = "form_q">Last Name</span></label>
+              <input type = "text" id = "lname" name = "lname" required>
+            </p>
+          </div>
+
+          <!-- Birthday -->
+          <div class = "cust_bday">
+            <label for = "bday"><span class = "form_q">Birthday</span></label>
+            <input type = "date" id ="bday" name = "bday">
+          </div>
+
+          <!-- Gender -->
+          <div class = "gender">
+            <p><span class = "form_q">Gender</span></p>
+            <ul>
+              <li>
+                <input type = "radio" id ="male" name = "gender">
+                <label for = "male">Male</label>
+              </li>
+
+              <li>
+                <input type = "radio" id ="female" name = "gender">
+                <label for = "female">Female</label>
+              </li>
+
+              <li>
+                <input type = "radio" id ="other" name = "gender">
+                <label for = "other">Other</label>
+              <li>
+          </div>
+        </section>
+
+        <!-- Delivery Address -->
+        <section class = "cust_address">
+          <h3>Delivery Address</h3>
+
+          <!-- Street Address -->
+          <div class = "street_address">
+            <label for = "street"><span class = "form_q">Address</span></label>
+            <input type = "text" id = "street" name = "street" placeholder = "Street & Brgy." required>
+
+            <label for = "building"></label>
+            <input type = "text" id = "building" name = "building" placeholder = "Floor/Unit# & Bldg." required>
+          </div>
+
+          <!-- City & Province -->
+          <div class = "city_province">
+            <p>
+              <label for = "city"><span class = "form_q">City</span></label>
+              <input type = "text" id = "city" name = "city" required>
+            </p>
+
+            <p>
+              <label for = "province"><span class = "form_q">Province</span></label>
+              <input type = "text" id = "province" name = "province" required>
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class = "cust_contact">
+          <h3>Contact</h3>
+          <p>
+            <label for = "cust_email"><span class = "form_q">Email</span></label>
+            <input type = "email" id = "cust_email" name = "cust_email">
+          </p>
+
+          <p>
+            <label for = "mobile"><span class = "form_q">Mobile Number</span></label>
+            <input type = "text" id = "mobile" name = "mobile" placeholder = "(09XX) XXX XXXX" required>
+          </p>
+
+        </section>
+
+        <!-- form actions -->
+        <section class = "form_actions">
+          <h3 class = "hidden">Actions</h3>
+
+          <button type= "reset" name="reset" value="Reset">Reset</button>
+
+          <a href = "customers.html" class = "back">Cancel</a> <!-- Cancel shouldn't be a button https://uxdesign.cc/cancel-as-a-button-or-a-link-67ccbf9df81e-->
+          <button type = "submit" value = "Save & Add">Save & Add</button> <!--Clicking on the Add Order button does not need to result in any action being performed.-->
+
+        </section>
+
+      </form>
+
+    </main>
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+
+  </body>
+</html>

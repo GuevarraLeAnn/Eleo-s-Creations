@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <main class = "edit">
+      <div class = "container3">
+
+      <!-- Order Information-->
+        <section class = "order_info">
+          <div>
+            <h2>Order #00000111</h2>
+            <p>06/30/2022</p>
+            <h3><a href = "../customers/customer1.html">Chrissy Cunningham</a></h3>
+          </div>
+          <div>
+            <h4>Special Instructions:</h4>
+            <p>Beef well-done, no egg for Beef Yakiniku</p>
+          </div>
+        </section>
+
+        <!-- Cart -->
+        <section class = "order_cart"> <!-- made this a class for future orders -->
+          <h3 class = "hidden">Cart</h3>
+
+          <table class = "cart">
+            <thead>
+              <tr>
+                <th colspan="2">Item</th>
+                <th>Qty</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                <img src = "../../images/order_menu/beef_yakiniku.png" alt = "beef yakiniku" class = "usr">
+                </td>
+                <td>Beef Yakiniku</td>
+                <td>1</td>
+                <td>PHP 198.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src = "../../images/order_menu/tori_katsu.png" alt = "tori katsu" class = "usr">
+                </td>
+                <td>Tori Katsu</td>
+                <td>1</td>
+                <td>PHP 180.00</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="3"><strong>Total Amount Due</strong></td>
+                <td><strong>PHP 378.00</strong></td>
+              </tr>
+            </tfoot>
+
+          </table>
+
+        <!-- Info Actions -->
+        <section class = "info_actions">
+          <h3 class = "hidden">Actions</h3>
+          <ul>
+            <li><a href = "editorder1.html" class = "edit_bttn_info">Edit Details<a/></li>
+            <li><a href = "confirm_order1_deletion.html" class = "delete_bttn_info">Delete Order<a/></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+</html>

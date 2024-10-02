@@ -1,0 +1,146 @@
+<!--
+    LeAnn C. Guevarra, 195832
+    July 8, 2022
+
+    I/we certify that this submission complies with the DISCS Academic
+    Integrity Policy.
+
+    If I/we have discussed my/our HTML code with anyone other than
+    my/our instructor(s), my/our groupmate(s), the teaching assistant(s),
+    the extent of each discussion has been clearly noted along with a
+    proper citation in the comments of my/our program.
+
+    If any HTML code or documentation used in my/our program was obtained
+    from another source, either modified or unmodified, such as a textbook,
+    website, or another individual, the extent of its use has been clearly
+    noted along with a proper citation in the comments of my/our program.
+-->
+
+<!--
+
+
+    cite your sources here
+
+    * illustrations are made by me
+
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+    https://ux.shopify.com/semantic-html-the-unbearable-rightness-of-being-9b3c493e1791
+    - guide to understanding semantics of html
+
+    https://www.quora.com/How-do-you-link-a-navigation-bar-to-a-section-on-the-same-page
+    - learned how to navigate within sections in the same page
+-->
+
+<!-- TO DO: Fix navigation scrolling and size of h3 elements-->
+
+<!-- This will be the introductory/front page of the website. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href = "styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "app">
+      <nav class = "home_nav">
+        <a href = "#"><img src = "images/cpc_logo_app.png" alt = "fds_logo" class = "logo"></a> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "#">Home</a></li>
+          <li><a href = "#n2">Services</a></li>
+          <li><a href = "#n3">Contact Us</a></li>
+          <li><a href="pages/signin.html">Sign In</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+    <main id = "home">
+      <!-- Hero section -->
+      <img src = "images/home/hero_img.png" alt = "hero section illustration" class ="hero_illustration">
+
+      <section id = "Hero">
+        <h2>Be a <b>#ProudPotato&#129364;</b> partner</h2>
+        <p>Partner today with <em class = "company_terms">Couch Potato's Corner</em>, as we bring more <em class = "company_terms">Couch Potatoes</em> to you!</p>
+        <p><em class = "company_terms">Couch Potato's Corner</em> is an online delivery and management service. We operate with a wide range of
+          trusted partner restaurants and shops and deliver to their customers nationwide.
+        <p id = "n2">Our goal is to provide our partners with the necessary skills and tools to grow and take control of their food business.</p>
+      </section>
+
+
+
+      <!-- Services -->
+      <section id = "Services">
+        <h3>What we offer</h3>
+      </section>
+
+
+      <!-- order management -->
+        <section id = "offer1" class = "offers">
+          <img src = "images/home/resto_mgt.png" alt = "resto illustration" class ="illustration">
+          <h4>Online order management</h4>
+          <p>Say goodbye to disorganized files, data, or sheets. We'll give you
+            the tools to easily <b>manage your customers, menu, and orders.</b>
+            Plus, <b id = n3>weekly analytics reports</b> so you can track your business's performance.</p>
+
+        </section>
+
+      <!-- customers service -->
+        <section id = "offer2" class = "offers">
+          <img src = "images/home/customers_home.png" alt = "couch potatoes illustration" class = "illustration">
+          <h4>Reach more customers</h4>
+          <p>We'll make sure to put you on the radar on our delivery app and social media platforms.
+            We are committed to help you <b>reach Couch Potatoes anytime anywhere.</b></p>
+        </section>
+
+      <!-- delivery service -->
+        <section id = "offer3" class = "offers">
+          <img src = "images/home/potato_boy.png" alt = "delivery rider illustration" class ="illustration">
+          <h4>Delivery anywhere</h4>
+          <p>Don't worry anymore about how far your restaurant is. Meet our <b>Potato Boys</b>!
+            They'll take good care of your orders and find where your Couch Potatoes live.
+            We deliver to any city, any time!</p>
+        </section>
+
+
+      <!-- Contact us -->
+      <section id ="Contact">
+
+        <h3>Contact Us</h3> <!-- https://www.w3schools.com/howto/howto_css_contact_form.asp -->
+
+        <form id = "contact_form">
+          <p>
+            <label for = "name_inq">Name</label>
+            <input type = "text" id = "name_inq" name = "name_inq">
+          </p>
+
+          <p>
+            <label for = "email_inq">Email</label>
+            <input type = "email" id = "email_inq" name = "email_inq">
+          </p>
+
+          <p>
+            <label for = "Message">Message</label>
+            <textarea id = "message" name = "message" rows="6" cols="50" placeholder = "Type message"></textarea>
+          </p>
+
+          <p>
+            <input type = "submit" value = "Send"><i></i><!-- add airplane icon -->
+          </p>
+        </form>
+
+
+      </section>
+    </main>
+
+    <footer>
+      <img src = "images/cpc_logo_footer.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+  </html>

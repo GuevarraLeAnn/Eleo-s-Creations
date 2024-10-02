@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "../order/orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <main class = "lists">
+
+      <section class = "header_main">
+        <h2>Customers</h2>
+        <a class = "add" href = "addcustomer.html">+ Add New Customer</a>
+      </section>
+
+
+      <section id = "customer_list">
+        <table class="list_table">
+          <thead>
+            <tr>
+              <th colspan="2">Name</th> <!-- https://css-tricks.com/complete-guide-table-element/ -->
+              <th>City & Province</th>
+              <th>Contact Number</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!--Customer 1-->
+            <tr>
+              <td>
+                <img src = "../../images/customer_list/user_chrissy_cunningham.jpeg" alt = "user image" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_users"><a href = "customer1.html">Chrissy Cunningham</a></h5>
+              </td>
+
+              <td>Alabang City, Metro Manila</td>
+              <td>0947 101 2141</td>
+              <td>vecnasfirst@gmail.com</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "customer1.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editcustomer1.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_customer1_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+
+            </tr>
+
+            <!--Customer 2-->
+            <tr>
+              <td>
+                <img src = "../../images/customer_list/user_eddie_munson.jpeg" alt = "user image" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_users"><a href = "customer2.html">Eddie Munson</a></h5>
+              </td>
+
+              <td>Quezon City, Metro Manila</td>
+              <td>0947 246 8101</td>
+              <td>thisismusic@gmail.com</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "customer2.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editcustomer2.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_customer2_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+            </tr>
+
+            <!--Customer 3-->
+            <tr>
+              <td>
+                <img src = "../../images/customer_list/user_steve_harrington.jpeg" alt = "user image" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_users"><a href = "customer3.html">Steve Harrington</a></h5>
+              </td>
+
+              <td>Taguig City, Metro Manila</td>
+              <td>0947 135 7911</td>
+              <td>iwant6harringtons@gmail.com</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "customer3.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editcustomer3.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_customer3_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+            </tr>
+
+            <!--Customer 4-->
+            <tr>
+              <td>
+                <img src = "../../images/customer_list/user_max_mayfield.jpeg" alt = "user image" class = "usr">
+              </td>
+              <td>
+                <h5 class = "n_users"><a href = "customer3.html">Max Mayfield</a></h5>
+              </td>
+
+              <td>Pasig City, Metro Manila</td>
+              <td>0947 222 8888</td>
+              <td>katebushfan@gmail.com</td>
+
+              <td> <!-- delete the labels, just keep the icons -->
+                <a href = "customer4.html"><img src = "../../images/icons/glass.png" class = "glass"><a/>
+                <a href = "editcustomer4.html"><img src = "../../images/icons/pen.png" class = "pen"><a/>
+                <a href = "confirm_customer4_deletion.html"><img src = "../../images/icons/bin.png" class = "bin"><a/>
+              </td>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+</html>
+
+
+<!-- page instructions
+
+Edit   pencil icon
+
+View   click customer name or magnifying glass icon or just view in general
+
+Delete  delete icon
+
+
+  This page lists all of the customers in the database. Each item shows the
+  name of the customer, the city & province in which the customer resides, and
+  their contact number. For each customer, there should be links to the edit
+  details and view details pages, and a delete customer button as well. These
+  other pages will be described in the succeeding items. List at least 3
+  customers. Only the first customer needs to have clickable buttons. This page
+  should also have a link that goes to the Add Customer page.
+
+-->

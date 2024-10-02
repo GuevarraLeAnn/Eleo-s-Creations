@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link href = "../../styles/styles.css" rel = "stylesheet">
+  </head>
+
+  <body>
+    <header class = "resto_user">
+      <nav class = "major">
+        <img src = "../../images/cpc_logo.png" alt = "fds_logo" class = "logo"> <!-- food deliver service logo -->
+        <h1 class = "hidden"><a href = "index.html">couch potato's corner</a></h1>
+
+        <ul>
+          <li><a href = "../customers/customers.html">Customers</a></li>
+          <li><a href = "../food/foods.html">Menu</a></li>
+          <li><a href = "orders.html">Orders</a></li>
+          <li><a href="../../index.html">Sign Out</a></li> <!-- Sign in style as a button -->
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <main class = "edit">
+      <!-- TAKE NOTE OF DIFFERENCE FROM ORDER1.HTML -->
+      <dialog class="update_dialog" open> <!-- https://css-tricks.com/some-hands-on-with-the-html-dialog-element/  or https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog-->
+        <div class = "d_content">
+          <img src = "../../images/icons/update_success.png" alt = "update success" class ="updated">
+          <h3>Update Success</h3>
+          <p>Your <strong class = "info">Order #00000111</strong> has successfully been updated.</p>
+          <form method="dialog">
+            <button class = "close-modal" value = "Ok">Ok</button>
+          </form>
+        </div>
+      </dialog>
+
+
+      <div class = "container3">
+
+      <!-- Order Information-->
+        <section class = "order_info">
+          <div>
+            <h2>Order #00000111</h2>
+            <p>06/30/2022</p>
+            <h3><a href = "../customers/customer1.html">Chrissy Cunningham</a></h3>
+          </div>
+          <div>
+            <h4>Special Instructions:</h4>
+            <p>Beef well-done, no egg for Beef Yakiniku</p>
+          </div>
+        </section>
+
+        <!-- Cart -->
+        <section class = "order_cart"> <!-- made this a class for future orders -->
+          <h3 class = "hidden">Cart</h3>
+
+          <table class = "cart">
+            <thead>
+              <tr>
+                <th colspan="2">Item</th>
+                <th>Qty</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                <img src = "../../images/order_menu/beef_yakiniku.png" alt = "beef yakiniku" class = "usr">
+                </td>
+                <td>Beef Yakiniku</td>
+                <td>1</td>
+                <td>PHP 198.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src = "../../images/order_menu/tori_katsu.png" alt = "tori katsu" class = "usr">
+                </td>
+                <td>Tori Katsu</td>
+                <td>1</td>
+                <td>PHP 180.00</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="3"><strong>Total Amount Due</strong></td>
+                <td><strong>PHP 378.00</strong></td>
+              </tr>
+            </tfoot>
+
+          </table>
+
+        <!-- Info Actions -->
+        <section class = "info_actions">
+          <h3 class = "hidden">Actions</h3>
+          <ul>
+            <li><a href = "editorder1.html" class = "edit_bttn_info">Edit Details<a/></li>
+            <li><a href = "confirm_order1_deletion.html" class = "delete_bttn_info">Delete Order<a/></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+
+    <!--footer-->
+    <footer class = "resto_user_footer">
+      <img src = "../../images/cpc_logo_footer2.png" alt = "fds_logo" class = "logo">
+      <p>&copy; 2022. All rights reserved. Couch Potato's Corner. Made by LeAnn Guevarra. Powered by CSCI 22.</p>
+    </footer>
+  </body>
+
+</html>
+
+
+
+
+<!--
+  <form> elements
+  - can close a dialog if they have the attribute method="dialog".
+  - When such a form is submitted, the dialog closes with its returnValue property
+    set to the value of the button that was used to submit the form.
+  ::backdrop CSS pseudo-element
+  - can be used to style behind a <dialog> element when the dialog is displayed with
+    HTMLDialogElement.showModal(). For example, to dim unreachable content behind the modal dialog.
+
+-->
+
+<!--
+  <dialog open>
+    <h2>Subscribe to our newsletter</h2>
+    <form method="dialog">
+      <input type="email" placeholder="example@email.com" />
+      <button type="submit" value="subscribe">Subscribe</button>
+      <button class="close-modal" value="cancel">No Thanks</button>
+    </form>
+  </dialog>
+
+-->
+
+
+<!--
+  if label and input id not the same
+  - The result is that the <label> and the <input> are actually not associated with each other at all.
+    Visually, everything looks right. But the bug introduces two accessibility problems:
+    - clicking the <label> won’t focus the form <input> to allow typing
+    - a screen reader will describe the <input> wrong, by not saying the <input> is an “offer price”
+
+
+
+
+<!--
+Links are navigation elements — the expectation is that they take you somewhere.
+-->
+
+<!-- INSTRUCTIONS
+
+An order details page is a page that allows the user to view the details of a
+chosen order - order number, date of order, name of customer who made the
+order, food item names in the order, quantity per food item, total price per
+item, and total price of the entire order.
+
+
+The buttons should work similarly to how the buttons in the customer and
+food details pages work, except it should go to the relevant pages for the
+relevant order item.
+
+
+
+
+
+Clicking on the Save button should bring the user back to the details page as
+well, but this page should also have a message that confirms that the update
+was a success. Name this page order1updated.html. You only need to
+make this for one order.
+
+-->
